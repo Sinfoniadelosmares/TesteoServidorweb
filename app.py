@@ -4,7 +4,9 @@ app = Flask(__name__)
 
 # Datos de ejemplo (lista de usuarios en memoria)
 usuarios = []
-
+@app.route("/")
+def index():
+    return "Bienvenido ala api"
 # Endpoint para crear un usuario
 @app.route("/usuarios", methods=["POST"])
 def crear_usuario():
